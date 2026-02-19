@@ -1,0 +1,33 @@
+{
+	"name": "RandomCategoryItems",
+	"version": "1.0.0",
+	"author": "RandomCategoryItems",
+	"url": "https://dradaba.de",
+	"descriptionmsg": "randomcategoryitems-desc",
+	"license-name": "GPL-2.0-or-later",
+	"type": "parserhook",
+	"requires": {
+		"MediaWiki": ">= 1.42.0"
+	},
+	"AutoloadClasses": {
+		"RandomCategoryItems": "includes/RandomCategoryItems.php"
+	},
+	"Hooks": {
+		"ParserFirstCallInit": "RandomCategoryItems::onParserFirstCallInit"
+	},
+	"MessagesDirs": {
+		"RandomCategoryItems": [
+			"i18n"
+		]
+	},
+	"ResourceModules": {
+		"ext.randomCategoryItems": {
+			"styles": "resources/ext.randomCategoryItems.css"
+		}
+	},
+	"ResourceFileModulePaths": {
+		"localBasePath": "",
+		"remoteExtPath": "RandomCategoryItems"
+	},
+	"manifest_version": 2
+}
