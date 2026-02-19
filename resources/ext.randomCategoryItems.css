@@ -13,11 +13,17 @@
 	gap: 0.4em 0.8em;
 }
 
+.rci-list.rci-vertical {
+	flex-direction: column;
+	gap: 0.3em;
+}
+
 .rci-item {
 	margin: 0;
 	padding: 0;
 }
 
+/* Standard-Stil mit Rahmen */
 .rci-item a {
 	display: inline-block;
 	padding: 0.2em 0.6em;
@@ -33,6 +39,24 @@
 	background-color: var( --color-surface-3, #ddd );
 	text-decoration: underline;
 }
+
+/* Ohne Rahmen */
+.rci-no-border .rci-item a {
+	background-color: transparent;
+	padding: 0;
+	border-radius: 0;
+}
+
+.rci-no-border .rci-item a:hover {
+	background-color: transparent;
+}
+
+.rci-bullets {
+	list-style: disc;
+	padding-left: 1.5em;
+}
+
+/* Inline-Styles werden direkt per style-Attribut gesetzt (siehe PHP) */
 
 .rci-more {
 	margin-top: 0.7em;
