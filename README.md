@@ -36,6 +36,6 @@ A list of the parameters
 | `radius`      | `round`, `square`, oder Wert | `radius="8px"`                  |                   |
 | `fontsize`    | em, px, %                    | `fontsize="0.85em"`             |                   |
 | `bullets`     | `yes` / `no`                 | `bullets="no"`                  | No bullets        |
-| `layout`      | `horizontal` / `vertical`    | `layout="horizontal"`           | Horizontal        |
+| `layout`      | `horizontal` / `vertical`    | `layout="vertical"`             | Horizontal        |
 | `more`        | Wikilink to category         | `more="Kategorie:Categoryname"` | Nothing is showed |
 | `morelabel`   | Rename the link              | `morelabel="See more →"`        | Nothing is showed |
