@@ -98,7 +98,7 @@ class RandomCategoryItems {
 	 * Gibt ein Array mit Seitentiteln (als String) zurück.
 	 */
 	private static function getCategoryMembers( string $categoryName ): array {
-		$dbr = wfGetDB( DB_REPLICA );
+		$dbr = \MediaWiki\MediaWikiServices::getInstance()->getDBLoadBalancer()->getConnection( DB_REPLICA );
 
 		$res = $dbr->select(
 			[ 'categorylinks', 'page' ],
