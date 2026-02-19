@@ -100,23 +100,26 @@ class RandomCategoryItems {
 	private static function getCategoryMembers( string $categoryName ): array {
 		$dbr = \MediaWiki\MediaWikiServices::getInstance()->getDBLoadBalancer()->getConnection( DB_REPLICA );
 
+		$categoryNameUnderscored = str_replace( ' ', '_', $categoryName );
+
 		$res = $dbr->select(
-			[ 'categorylinks', 'page' ],
+			[ 'categorylinks', 'page', 'linktarget' ],
 			[ 'page_title', 'page_namespace' ],
 			[
-				'cl_to'          => str_replace( ' ', '_', $categoryName ),
-				'page_namespace' => NS_MAIN,  // Nur Artikel, keine Diskussions- oder andere Seiten
+				'lt_namespace'   => NS_CATEGORY,
+				'lt_title'       => $categoryNameUnderscored,
+				'page_namespace' => NS_MAIN,
 			],
 			__METHOD__,
 			[ 'ORDER BY' => 'page_title' ],
 			[
-				'page' => [ 'INNER JOIN', 'page_id = cl_from' ]
+				'linktarget' => [ 'INNER JOIN', 'lt_id = cl_target_id' ],
+				'page'       => [ 'INNER JOIN', 'page_id = cl_from' ],
 			]
 		);
 
 		$pages = [];
 		foreach ( $res as $row ) {
-			// Unterstriche in Leerzeichen umwandeln für lesbare Titel
 			$pages[] = str_replace( '_', ' ', $row->page_title );
 		}
 
