@@ -1,0 +1,50 @@
+/* RandomCategoryItems – Styles */
+
+.rci-container {
+	margin: 0.5em 0 1em 0;
+}
+
+.rci-list {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	display: flex;
+	flex-wrap: wrap;
+	gap: 0.4em 0.8em;
+}
+
+.rci-item {
+	margin: 0;
+	padding: 0;
+}
+
+.rci-item a {
+	display: inline-block;
+	padding: 0.2em 0.6em;
+	border-radius: 3px;
+	background-color: var( --color-surface-2, #f0f0f0 );
+	color: var( --color-progressive, #3366cc );
+	text-decoration: none;
+	font-size: 0.95em;
+	transition: background-color 0.15s;
+}
+
+.rci-item a:hover {
+	background-color: var( --color-surface-3, #ddd );
+	text-decoration: underline;
+}
+
+.rci-more {
+	margin-top: 0.7em;
+}
+
+.rci-more-link {
+	font-size: 0.9em;
+	color: var( --color-progressive, #3366cc );
+}
+
+.rci-error,
+.rci-empty {
+	color: var( --color-warning, #ac6600 );
+	font-style: italic;
+}
