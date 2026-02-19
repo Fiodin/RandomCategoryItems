@@ -11,14 +11,16 @@ wfLoadExtension( 'RandomCategoryItems' );
 # Integration
 Simply add this anywhere inside a wiki text:
 ```html
-<randomcategoryitems category="Freestylekite" count="10" />
+<randomcategoryitems category="categoryname" count="10" />
 ```
 
 or you can customize ist with a "more" link with an own label:
 ```html
 <randomcategoryitems 
-  category="Freestylekite" 
-  count="10" 
-  more="Kategorie:Freestylekite" 
-  morelabel="Alle Freestylekites ansehen →" />
+  category="categoryname" 
+  count="10"
+  border="no"
+  layout="horizontal"
+  more="Kategorie:Category" 
+  morelabel="More to see →" />
 ```
