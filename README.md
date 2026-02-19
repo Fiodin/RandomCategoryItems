@@ -1,5 +1,6 @@
 # RandomCategoryItems
-Random list of  Wiki categories with a "more" button
+Random list of  Wiki categories with a "more" button.
+The list will randomnize itself once per day. The cache TTL is set to 86400 seconds (= 24 hours). The exact time depends on when the page is first accessed after a cache expiry, so not at a fixed time of day, but relative to the last render timestamp.
 
 # Install
 Simply add the files into the folder 'RandomCategoryItems'.
