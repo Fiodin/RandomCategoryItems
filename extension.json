@@ -1,7 +1,7 @@
 {
 	"name": "RandomCategoryItems",
 	"version": "1.0.0",
-	"author": "RandomCategoryItems",
+	"author": ["Drachendatenbank Team"],
 	"url": "https://dradaba.de",
 	"descriptionmsg": "randomcategoryitems-desc",
 	"license-name": "GPL-2.0-or-later",
